@@ -5,7 +5,6 @@
  */
 package clasesfaceboot;
 
-import java.awt.Image;
 import java.util.Date;
 import java.util.List;
 
@@ -16,12 +15,12 @@ import java.util.List;
 public class Publicacion {
     private Date fechaHora;
     private String contenidoTex;
-    private Image contenidoImg;
+    private String contenidoImg;
     private List<String> etiquetas;
     private List<Usuario> usuariosEtiquetados;
     private Usuario usuario;
 
-    public Publicacion(Date fechaHora, String contenidoTex, Image contenidoImg,
+    public Publicacion(Date fechaHora, String contenidoTex, String contenidoImg,
             List<String> etiquetas, List<Usuario> usuariosEtiquetados, Usuario usuario) {
         this.fechaHora = fechaHora;
         this.contenidoTex = contenidoTex;
@@ -29,7 +28,17 @@ public class Publicacion {
         this.etiquetas = etiquetas;
         this.usuariosEtiquetados = usuariosEtiquetados;
         this.usuario = usuario;
-    }  
+    }
+
+    public Publicacion() {
+    }
+
+    public Publicacion(Date fechaHora, String contenidoTex, String contenidoImg, Usuario usuario) {
+        this.fechaHora = fechaHora;
+        this.contenidoTex = contenidoTex;
+        this.contenidoImg = contenidoImg;
+        this.usuario = usuario;
+    }
     
     public Date getFechaHora() {
         return fechaHora;
@@ -47,11 +56,11 @@ public class Publicacion {
         this.contenidoTex = contenidoTex;
     }
 
-    public Image getContenidoImg() {
+    public String getContenidoImg() {
         return contenidoImg;
     }
 
-    public void setContenidoImg(Image contenidoImg) {
+    public void setContenidoImg(String contenidoImg) {
         this.contenidoImg = contenidoImg;
     }
 
