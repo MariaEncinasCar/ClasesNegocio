@@ -5,6 +5,7 @@
  */
 package clasesfaceboot;
 
+import java.awt.Image;
 import java.util.Date;
 import java.util.List;
 
@@ -15,17 +16,15 @@ import java.util.List;
 public class Publicacion {
     private Date fechaHora;
     private String contenidoTex;
-    private String contenidoImg;
-    private List<String> etiquetas;
+    private Image contenidoImg;
     private List<Usuario> usuariosEtiquetados;
     private Usuario usuario;
 
-    public Publicacion(Date fechaHora, String contenidoTex, String contenidoImg,
-            List<String> etiquetas, List<Usuario> usuariosEtiquetados, Usuario usuario) {
+    public Publicacion(Date fechaHora, String contenidoTex, Image contenidoImg,
+            List<Usuario> usuariosEtiquetados, Usuario usuario) {
         this.fechaHora = fechaHora;
         this.contenidoTex = contenidoTex;
         this.contenidoImg = contenidoImg;
-        this.etiquetas = etiquetas;
         this.usuariosEtiquetados = usuariosEtiquetados;
         this.usuario = usuario;
     }
@@ -33,7 +32,7 @@ public class Publicacion {
     public Publicacion() {
     }
 
-    public Publicacion(Date fechaHora, String contenidoTex, String contenidoImg, Usuario usuario) {
+    public Publicacion(Date fechaHora, String contenidoTex, Image contenidoImg, Usuario usuario) {
         this.fechaHora = fechaHora;
         this.contenidoTex = contenidoTex;
         this.contenidoImg = contenidoImg;
@@ -56,20 +55,12 @@ public class Publicacion {
         this.contenidoTex = contenidoTex;
     }
 
-    public String getContenidoImg() {
+    public Image getContenidoImg() {
         return contenidoImg;
     }
 
-    public void setContenidoImg(String contenidoImg) {
+    public void setContenidoImg(Image contenidoImg) {
         this.contenidoImg = contenidoImg;
-    }
-
-    public List<String> getEtiquetas() {
-        return etiquetas;
-    }
-
-    public void setEtiquetas(List<String> etiquetas) {
-        this.etiquetas = etiquetas;
     }
 
     public List<Usuario> getUsuariosEtiquetados() {
